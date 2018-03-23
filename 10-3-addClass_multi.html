@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>엘리먼트에 접근해서 스타일 지정</title>
+	<style type="text/css">
+		.c2{color:blue;}
+		.bgi{background-image: url(http://bit.ly/1SO8JkH);background-size:cover;}
+		.bgc{background-color:#ff0;}
+		.ff{line-height: 100px;}
+		.fw{font-weight: 800;}
+		.lh{line-height:50px;}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$("#content").addClass("ff bgi");
+			$(".basic").addClass("c2 bgc");
+			$("#content span").addClass("fw");
+			$("#content li").addClass("lh");
+		});
+	</script>
+</head>
+<body>
+	<h1>제이쿼리로 태그, 아이디, 클래스 접근</h1>
+
+	<h2>2. 학습내용</h2>
+	<div id="content">
+		<ol>
+			<li><span class="basic">HTML 기본태그와 스타일시트</span></li>
+			<li>HTML5 기반의 시멘틱 태그와 CSS3 효과 </li>
+			<li>동적인 기능의 상호작용을 담당하는 클라이언트 스크립트</li>
+			<li>접속장치에 따른 <span>Responsive Web Design</span></li>
+		</ol>
+	</div>
+</body>
+</html>

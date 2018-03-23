@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>.parent() 와 .siblings() 으로 부모와 형제요소를 선택</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+   <script type="text/javascript">
+   //<![CDATA[
+      $(function(){
+         var parent_name = $("h1").parent();
+         //console.log(parent_name);
+         //window.alert("h1 요소의 부모는 " + parent_name[0].nodeName);
+
+         //1. h1의 부모요소에 검정색 테투리 1px로 설정
+         $("h1").parent().css("border","1px solid black");
+
+         //2. .me 요소를 클릭하면 좌우의 형제 li요소의 css 속성이 다음과 같이 설정되도록 코드를 작성하세요.
+         //fz:35px. bgc:yellow, c:blue (JSON 방식)
+         $("li.me").click(function(){
+            $(this).siblings().css({
+               "font-size" : "35px",
+               "background-color" : "yellow",
+               "color" : "blue"
+            });
+         });
+      });
+   //]]>
+   </script>
+</head>
+<body>
+   <div id="wrap">
+      <header>
+         <h1>.parent() 메소드는 직계부모를 셀렉팅</h1>
+      </header>
+      <section>
+         <h2>siblings 구조</h2>
+         <ol>
+            <li>데이터 타입과 연산자</li>
+            <li>.addClass( )</li>
+            <li>자바스크립트 함수</li>
+            <li class="me">다중셀렉팅</li>
+            <li>제이쿼리로 CSS 스타일 정보 변경 및 가져오기</li>
+            <li>siblings 구조</li>
+         </ol>
+      </section>      
+   </div>
+</body>
+</html>

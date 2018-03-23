@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>.eq() 메소드로 인덱스에 일치하는 요소 선택</title>
+	<style type="text/css">
+	*{margin:0;padding:0;}
+	#wrap{width:500px;margin:0 auto;text-align:center;}
+	.title{color:blue;font-size:30px;letter-spacing:1px;}
+	ul,li{list-style:none;}
+	ul>li{line-height:60px;}
+	
+	.bgc{background-color:#FF0;}
+	.fz{font-size:20px;}
+	.fw{font-weight:800;}
+	.c{color:red;}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+		$(function(){
+
+			//1. li 요소 중 인덱스 번호가 2인 요소를 클릭하면  .bgc 클래스를 추가
+
+			console.log();
+
+			//$(".color>li").eq(2).addClass("bgc");
+			$(".color>li").eq(2).click(function(){
+				$(this).addClass("bgc");
+			});
+
+			//2. li 요소 중 인덱스 번호가 4인 요소를 클릭하면  .fz와 fw 클래스를 추가0
+			$(".color>li").eq(4).click(function(){
+				$(this).addClass("fz fw c");
+			});
+
+			//3. h1 요소를 클릭하면 .title 클래스를 제거
+			$("h1").click(function(){
+				$(this).removeClass("title");
+			});
+
+		});
+	//]]>
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<h1 class="title">.eq() 메소드</h1>
+		<ul class="color">
+			<li>빨간색</li>
+			<li>오렌지색</li>
+			<li>노란색</li>
+			<li>초록색</li>
+			<li>파란색</li>
+		</ul>
+	</div>
+</body>
+</html>

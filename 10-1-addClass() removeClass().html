@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>.addClass( ) 메소드 - 동적으로 클래스 추가</title>
+   <style type="text/css">
+      .fw{font-weight:800;}
+      .c{color:#00f}
+      .fz{font-size:50px;}
+   </style>
+   <script src="http://code.jquery.com/jquery.min.js"></script>
+   <script type="text/javascript">
+      $(document).ready(function(){
+         //1. h1요소에 .fw 클래스를 추가하세요.
+         $("h1").addClass("fw");
+         
+         //2. 아이디가 king인 요소에 .c 클래스를 추가하세요.
+         $("#king").addClass("c");
+
+         //3. 클래스명이 .queen인 요소에 .fz 클래스를 추가하세요
+         $(".queen").addClass("fz");
+         
+         //4. h1요소를 클릭하면 .fw 클래스를 삭제하세요.
+         $("h1").click(function(){
+            $(this).removeClass("fw");
+         });
+         
+         //5. .c 클래스를 가진 요소를 클릭하면 .fafa 클래스가 삭제되는 코드를 작성하세요.
+         $(".c").click(function(){
+            $(this).removeClass("fafa");
+         });
+         
+         //6. 클래스명이 .fz인 요소를 클릭하면 .queen 클래스가 삭제되는 코드를 작성하세요.
+         $(".fz").click(function(){
+            $(this).removeClass("queen");
+         });
+
+      });//준비핸들러
+   </script>
+</head>
+<body>
+   <h1>헤드라인-1</h1>
+   <h2 id="king" class="fafa">헤드라인-2</h2>
+   <h3 class="queen">헤드라인-3</h3>
+</body>
+</html>

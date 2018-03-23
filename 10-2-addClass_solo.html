@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>엘리먼트에 접근해서 스타일 지정</title>
+	<style type="text/css">
+		.bgc{background-color:yellow}
+		.c{color:red}
+		.fz{font-size:30px}
+		.fs{font-style:italic;}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			$("#publish").addClass("bgc");
+			$(".web").addClass("fz");
+			$("#publish li").addClass("fs");
+			$("#publish span").addClass("fs c");
+		});
+	</script>
+</head>
+<body>	
+	<h1>제이쿼리로 태그, 아이디, 클래스 접근</h1>
+	
+	<div id="publish">	
+		<h2>1. 웹퍼블리싱 교육과정</h2>
+		<ol>
+			<li><span class="web">웹표준기초</span></li>
+			<li>HTML5&amp;CSS3</li>
+			<li>제이쿼리 &bull; 자바스크립트</li>
+			<li><span>반응형웹</span></li>
+		</ol>
+	</div>
+</body>
+</html>

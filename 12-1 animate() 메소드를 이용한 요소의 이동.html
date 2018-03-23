@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>제이쿼리 애니메이션</title>
+   <link rel="stylesheet" href="css/reset.css" />
+   <style type="text/css">
+      #wrap{width:800px;margin:0 auto;text-align:center;}
+      header>h1{height:100px;line-height:100px;}
+      
+      section{position:relative;}
+      section>.box{
+         position:absolute;
+         left:0;top:100px;
+         width:100px;height:100px;
+         line-height:100px;
+         background-color:#FF0;
+         border:3px solid black;
+      }
+   </style>
+   <script src="http://code.jquery.com/jquery.min.js"></script> 
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+   <script type="text/javascript">
+   //<![CDATA[
+      $(function(){
+
+         //버튼을 클릭하면 박스의 좌표를 (?,?) 이 곳으로 설정하는 좌표를 설정하세요.
+
+         $("button").click(function(){
+            $(".box").animate({
+               "left" : "600",
+               "top" : "400",
+               "width" : "200px",
+               "height" : "200px",
+               "background-color" : "blue"
+            },2000,"easeInOutBounce").animate({
+
+               "left" : "0",
+               "top" : "100",
+               "width" : "100px",
+               "height" : "100px",
+               "background-color" : "yellow"
+            },2000,"easeInOutCubic")
+         });
+      });
+   //]]>
+   </script>
+</head>
+<body>
+   <div id="wrap">
+      <header>
+         <h1>박스 애니메이트</h1>
+      </header>
+      <section>
+         <p class="box">박스</p>
+      </section>
+      <footer>
+         <p><button type="button">실행</button></p>
+      </footer>
+   </div>
+</body>
+</html>
